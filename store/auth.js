@@ -5,9 +5,9 @@ export const actions = {
     return await this.$api.auth.logout()
   },
   async resetPassword() {
-    return await this.$api.auth.logout()
+    return await this.$api.auth.resetPassword('pass', 'pass', 'token')
   },
-  async register({ user }) {
+  async register(context, { user }) {
     return await this.$api.auth.register(user)
   },
 }
